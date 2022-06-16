@@ -19,18 +19,19 @@ for (let heart of hearts){
       e.target.innerText = FULL_HEART;
       e.target.className = "activated-heart"
       }
-      else{
-        e.target.innerText === EMPTY_HEART;
-        e.target.className = "";
-      }
+      // else{
+      //   e.target.innerText === EMPTY_HEART;
+      //   e.target.className = "";
+      // }
 
     })
     .catch((error) => {
-      const modal = document.getElementById("modal")
-      modal.className = "";
-      modal.innerText = error
-      setTimeout(() => modal.className = "hidden", 3000);
+      const modalError = document.getElementById("modal")   //added the class .hidden in html
+      modalError.className = "";
+      modalError.innerText = error
+      setTimeout(() => modalError.className = "hidden", 3000);
     })
+
   })
 }
 
