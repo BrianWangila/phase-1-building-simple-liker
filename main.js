@@ -10,6 +10,7 @@ const hearts = document.querySelectorAll("li span");
 for (let heart of hearts){
   heart.addEventListener("click", (e) => {
     // e.preventDefault();
+    console.log("test")
     e.target.child
     
 
@@ -18,6 +19,10 @@ for (let heart of hearts){
       if (e.target.innerText === EMPTY_HEART) {
       e.target.innerText = FULL_HEART;
       e.target.className = "activated-heart"
+      }
+      else if (e.target.innerText === FULL_HEART){
+        e.target.innerText = EMPTY_HEART;
+
       }
     
 
